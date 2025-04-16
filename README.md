@@ -17,6 +17,46 @@ Emails are highly effective as they are *free*, **scalable**, and **personalizab
 
 ---
 
+## 📊 Key Insights from Exploratory Data Analysis
+
+Below are interesting behavioral patterns discovered across different segments:
+
+### 🔠 Email Content & Personalization
+- **Short Emails perform better**: 
+  - **Open Rate**: 11.59% vs 9.12% (short vs long)
+  - **Click Rate**: 2.39% vs 1.85%
+- **Personalized Emails outperform Generic**:
+  - **Open Rate**: 12.78% vs 7.93%
+  - **Click Rate**: 2.73% vs 1.51%
+
+### 🕰️ Time of Day Matters
+- Best performance observed during **9 AM – 12 PM**, aligning with typical workday engagement:
+  - **Peak Open Rate**: 15.94% at 12 AM and 13.24% at 10 AM
+  - **Peak Click Rate**: 4.14% at 11 PM and 2.90% at 12 AM
+- Lowest engagement occurs during **late evening hours (8 PM – 11 PM)**.
+
+### 📅 Day of the Week Insights
+- **Midweek days (Tue–Thu)** yield highest engagement:
+  - **Top Click Rates**: Wednesday (2.76%), Tuesday (2.49%), Thursday (2.44%)
+- **Fridays and weekends** have lower engagement:
+  - Friday Click Rate: 1.40%
+
+### 🌍 Country-wise Trends
+- **UK and US users** show significantly higher engagement:
+  - UK: 12.02% open, 2.47% click
+  - US: 11.90% open, 2.44% click
+- **European countries (ES, FR)** show much lower response:
+  - FR: 4.06% open, 0.80% click
+
+### 🛒 User Past Purchases
+- Strong positive correlation between **purchase history and engagement**:
+  - Users with 0 past purchases: **0.05% click rate**
+  - Users with 10+ past purchases: **4.66%+ click rate**
+- Super-engaged users (14–22 past purchases) show **click rates above 9%**, with some as high as **100%**.
+
+These patterns indicate that **targeting short, personalized emails during working hours on Tuesday–Thursday**—especially to users with a strong purchase history—can significantly boost campaign performance.
+
+---
 ## 🧱 Datasets Used
 
 ### `email_table`
