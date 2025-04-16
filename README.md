@@ -87,7 +87,10 @@ New features created to enhance model learning:
 
 - **Baseline CTR**: How often people click on average (real-world benchmark)  
 - **Model Predicted CTR**: What your model thinks the CTR will be (on average)  
-- **Improvement (%)**: How much better (or worse) the model is compared to just guessing the baseline CTR for everyone  
+- **Improvement (%)**: How much better (or worse) the model is compared to just guessing the baseline CTR for everyone
+
+- If positive, the model is predicting higher CTRs than the average (baseline), suggesting it has learned something useful.
+- If negative, it may be overfitting, underperforming, or useless.
 
 Despite high validation accuracy, the negative improvement suggests overfitting or a need for better calibration. This highlights the importance of **contextual performance metrics** (like CTR lift) over raw accuracy.
 
