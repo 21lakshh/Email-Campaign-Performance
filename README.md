@@ -74,7 +74,7 @@ New features created to enhance model learning:
 ## 🏆 Best Performing Model
 
 - **Model**: `SVC (Support Vector Classifier)`  
-- **Validation Score**: **0.97735**
+- **Score**: **97.73**
 
 ---
 
