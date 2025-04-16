@@ -6,7 +6,7 @@ Emails are highly effective as they are *free*, **scalable**, and **personalizab
 
 ---
 
-## 📊 Project Summary
+##  Project Summary
 
 - **Total Emails Sent**: 100,000  
 - **Emails Opened**: 10,345  
