@@ -100,40 +100,45 @@ New features created to enhance model learning:
 
 ## 🤖 Models Trained
 
-| Model                     | Type                  |
-|--------------------------|-----------------------|
-| `LogisticRegression()`    | Linear                |
-| `DecisionTreeClassifier()`| Tree-based            |
-| `RandomForestClassifier()`| Ensemble              |
-| `GradientBoostingClassifier()` | Boosting        |
-| `KNeighborsClassifier()`  | Distance-based        |
-| `XGBClassifier()`         | Gradient Boosting (XGBoost) |
-| `SVC(probability=True)`   | Support Vector Machine|
+| Model                          | Type                        |
+|-------------------------------|-----------------------------|
+| `LogisticRegression()`         | Linear                      |
+| `DecisionTreeClassifier()`     | Tree-based                  |
+| `RandomForestClassifier()`     | Ensemble                    |
+| `GradientBoostingClassifier()` | Boosting                    |
+| `KNeighborsClassifier()`       | Distance-based              |
+| `XGBClassifier()`              | Gradient Boosting (XGBoost) |
+| `SVC(probability=True)`        | Support Vector Machine      |
 
 ---
 
-## 🏆 Best Performing Models & Evolution
+## 🏆 Model Progression & Performance Evaluation
 
-| Stage                       | Best Model           | CTR Improvement |
-|----------------------------|----------------------|------------------|
-| Before Feature Engineering | Logistic Regression  | **-1.68%**       |
-| After Feature Engineering  | SVC                  | **-0.39%**       |
-| After Grid Search Tuning   | Tuned SVC            | **+2.89%**       |
+### 📍 Initial Modeling (Before Feature Engineering)
+- **Best Model**: `LogisticRegression`
+- **Potential CTR Improvement**: **-1.68%**
+- Interpretation: The model performed worse than just assuming the baseline CTR for everyone.
 
-> 🔍 Note:  
-> The grid search was done on a **small parameter space** due to high computation time. With **further hyperparameter tuning**, it's likely that even **greater CTR improvements** can be achieved.
+### ⚙️ After Feature Engineering
+- **Best Model**: `SVC (Support Vector Classifier)`
+- **Score**: **97.73%**
+- **Potential CTR Improvement**: **-0.39%**
+- Interpretation: High validation accuracy, but still underperformed in terms of CTR improvement — indicating overfitting or lack of generalization.
+
+### 🔧 Grid Search Tuned Model
+- **Model**: Tuned `SVC`
+- **Potential CTR Improvement**: **+2.89%**
+- Interpretation: A positive CTR improvement suggests the model could potentially **improve campaign performance by 2.89%** 
+- ⚠️ Note: Grid Search was run on a **small scale due to computation time**. Further tuning could potentially lead to even better performance.
 
 ---
 
-## 📈 Performance Evaluation
+## 📈 What CTR Improvement Tells You
 
-- **Baseline CTR**: Real-world average (historical benchmark)
-- **Model Predicted CTR**: Average predicted CTR across the dataset
-- **CTR Improvement**: Comparison to the baseline
+- **Baseline CTR**: The average CTR if we assume all users behave the same.
+- **Model Predicted CTR**: The model’s estimation based on user features.
+- **CTR Improvement**: The net gain from using the model over just assuming the baseline.
 
-- Negative improvement indicates overfitting or lack of generalization
-- Positive improvement suggests the model is **effectively learning patterns** that generalize to new data
-
-Despite high validation accuracy from models like SVC, **real success is measured by CTR uplift**, not raw accuracy—highlighting the importance of **business-aligned evaluation metrics**.
+> A **positive CTR improvement** means the model has learned something useful and can be deployed to increase engagement through **targeted campaigns**. However, models must be evaluated not just on accuracy, but on **practical impact metrics like CTR lift**.
 
 ---
