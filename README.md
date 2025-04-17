@@ -57,6 +57,7 @@ Below are interesting behavioral patterns discovered across different segments:
 These patterns indicate that **targeting short, personalized emails during working hours on Tuesday–Thursday**—especially to users with a strong purchase history—can significantly boost campaign performance.
 
 ---
+
 ## 🧱 Datasets Used
 
 ### `email_table`
@@ -111,27 +112,28 @@ New features created to enhance model learning:
 
 ---
 
-## 🏆 Best Performing Model
+## 🏆 Best Performing Models & Evolution
 
-- **Model**: `SVC (Support Vector Classifier)`  
-- **Score**: **97.73%**
+| Stage                       | Best Model           | CTR Improvement |
+|----------------------------|----------------------|------------------|
+| Before Feature Engineering | Logistic Regression  | **-1.68%**       |
+| After Feature Engineering  | SVC                  | **-0.39%**       |
+| After Grid Search Tuning   | Tuned SVC            | **+2.89%**       |
+
+> 🔍 Note:  
+> The grid search was done on a **small parameter space** due to high computation time. With **further hyperparameter tuning**, it's likely that even **greater CTR improvements** can be achieved.
 
 ---
 
 ## 📈 Performance Evaluation
 
-- **Predicted Average CTR**: Slightly lower than historical CTR  
-- **Potential CTR Improvement**: **-0.39%**
+- **Baseline CTR**: Real-world average (historical benchmark)
+- **Model Predicted CTR**: Average predicted CTR across the dataset
+- **CTR Improvement**: Comparison to the baseline
 
-### 🔍 What It Tells You
+- Negative improvement indicates overfitting or lack of generalization
+- Positive improvement suggests the model is **effectively learning patterns** that generalize to new data
 
-- **Baseline CTR**: How often people click on average (real-world benchmark)  
-- **Model Predicted CTR**: What your model thinks the CTR will be (on average)  
-- **Improvement (%)**: How much better (or worse) the model is compared to just guessing the baseline CTR for everyone
-
-- If positive, the model is predicting higher CTRs than the average (baseline), suggesting it has learned something useful.
-- If negative, it may be overfitting, underperforming, or useless.
-
-Despite high validation accuracy, the negative improvement suggests overfitting or a need for better calibration. This highlights the importance of **contextual performance metrics** (like CTR lift) over raw accuracy.
+Despite high validation accuracy from models like SVC, **real success is measured by CTR uplift**, not raw accuracy—highlighting the importance of **business-aligned evaluation metrics**.
 
 ---
